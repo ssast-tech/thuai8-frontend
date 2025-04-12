@@ -1,0 +1,268 @@
+{
+    "mapMetadata": {
+        "mapName": "测试战场",
+        "mapDescription": "用于单元测试的基础战场",
+        "mapWidth": 5,
+        "cubeSize": 1.0,
+        "rows": [
+            {
+                "row": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0
+                ]
+            },
+            {
+                "row": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    1
+                ]
+            },
+            {
+                "row": [
+                    0,
+                    1,
+                    2,
+                    1,
+                    0
+                ]
+            },
+            {
+                "row": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    1
+                ]
+            },
+            {
+                "row": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0
+                ]
+            }
+        ]
+    },
+    "soldiersData": {
+        "soldiers": [
+            {
+                "ID": 0,
+                "soldierType": "Warrior",
+                "camp": "Red",
+                "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "stats": {
+                    "health": 100,
+                    "strength": 30,
+                    "mana": 20
+                }
+            },
+            {
+                "ID": 1,
+                "soldierType": "Mage",
+                "camp": "Blue",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 4
+                },
+                "stats": {
+                    "health": 80,
+                    "strength": 10,
+                    "mana": 100
+                }
+            },
+            {
+                "ID": 2,
+                "soldierType": "Mage",
+                "camp": "Blue",
+                "position": {
+                    "x": 9,
+                    "y": 0,
+                    "z": 4
+                },
+                "stats": {
+                    "health": 80,
+                    "strength": 10,
+                    "mana": 100
+                }
+            },
+            {
+                "ID": 3,
+                "soldierType": "Archer",
+                "camp": "Red",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 7
+                },
+                "stats": {
+                    "health": 80,
+                    "strength": 10,
+                    "mana": 100
+                }
+            }
+        ]
+    },
+    "gameRounds": [
+        {
+            "roundNumber": 0,
+            "actions": [
+                {
+                    "actionType": "movement",
+                    "soldierId": 0,
+                    "path": [
+                        {
+                            "x": 2,
+                            "y": 0,
+                            "z": 0
+                        },
+                        {
+                            "x": 3,
+                            "y": 0,
+                            "z": 0
+                        },
+                        {
+                            "x": 5,
+                            "y": 0,
+                            "z": 0
+                        }
+                    ],
+                    "remainingMovement": 1
+                },
+                {
+                    "actionType": "attack",
+                    "soldierId": 1,
+                    "targetId": 2,
+                    "damageDealt": 25,
+                    "newStats": {
+                        "health": 100,
+                        "strength": 30,
+                        "mana": 15
+                    }
+                },
+                {
+                    "actionType": "ability",
+                    "soldierId": 2,
+                    "ability": "火球术",
+                    "targetPosition": {
+                        "x": 2,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "manaCost": 30
+                }
+            ]
+        },
+        {
+            "roundNumber": 1,
+            "actions": [
+                {
+                    "actionType": "movement",
+                    "soldierId": 1,
+                    "path": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        {
+                            "x": 1,
+                            "y": 0,
+                            "z": 0
+                        },
+                        {
+                            "x": 2,
+                            "y": 0,
+                            "z": 0
+                        }
+                    ],
+                    "remainingMovement": 1
+                },
+                {
+                    "actionType": "attack",
+                    "soldierId": 1,
+                    "targetId": 2,
+                    "damageDealt": 25,
+                    "newStats": {
+                        "health": 100,
+                        "strength": 30,
+                        "mana": 15
+                    }
+                },
+                {
+                    "actionType": "ability",
+                    "soldierId": 2,
+                    "ability": "火球术",
+                    "targetPosition": {
+                        "x": 2,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "manaCost": 30
+                }
+            ]
+        },
+        {
+            "roundNumber": 2,
+            "actions": [
+                {
+                    "actionType": "movement",
+                    "soldierId": 2,
+                    "path": [
+                        {
+                            "x": 10,
+                            "y": 0,
+                            "z": 10
+                        },
+                        {
+                            "x": 1,
+                            "y": 0,
+                            "z": 0
+                        },
+                        {
+                            "x": 10,
+                            "y": 0,
+                            "z": 10
+                        }
+                    ],
+                    "remainingMovement": 1
+                },
+                {
+                    "actionType": "attack",
+                    "soldierId": 1,
+                    "targetId": 2,
+                    "damageDealt": 25,
+                    "newStats": {
+                        "health": 100,
+                        "strength": 30,
+                        "mana": 15
+                    }
+                },
+                {
+                    "actionType": "ability",
+                    "soldierId": 2,
+                    "ability": "火球术",
+                    "targetPosition": {
+                        "x": 2,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "manaCost": 30
+                }
+            ]
+        }
+    ]
+}
